@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>HotSpot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../category_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../index.html"><img src="../_img/HotSpot_Logo_FNL.png" href="index.html" width="98" height="40.5"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>
+
+
+  <div class="explore">
+      <a href="category.html"><h1>EXPLORE THE POSSIBILITIES</h1></a>
+      <div class"row">
+    <div id="map" style="height:400px;width:100%;"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+
+          zoom: 10,
+          center: new google.maps.LatLng(29.7628181,-95.3633884),
+          mapTypeId: 'roadmap'
+        });
+
+        var iconBase = '../_img/';
+        var icons = {
+
+          tech: {
+            icon: iconBase + 'Pindrop_Tech.png'
+          }
+        };
+
+        var features = [
+          {
+            position: new google.maps.LatLng(29.7928181,-95.3533884),
+            title: 'Houston Bitcoiners',
+            animation: google.maps.Animation.DROP,
+            type: 'tech'
+          }, {
+            position: new google.maps.LatLng(29.8628181,-95.233884),
+            title: 'Code.Coffee.Crash.',
+            animation: google.maps.Animation.DROP,
+            type: 'tech'
+          }
+        ];
+
+        // Create markers.
+        features.forEach(function(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            title: feature.title,
+            animation: feature.animation,
+            url: features.url,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+          google.maps.event.addListener(marker, 'click', function () {
+            window.location.href = '../category_pages/TECH.html';
+          });
+        });
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+      </div>
+      <br>
+
+      <div class="row">
+          <div class="col-md-3">
+              <a href="map_outdoor.html"><img src="../_img/camping.png"></a>
+              <h4>Outdoor & Adventure</h4></div>
+          <div class="col-md-3">
+            <a href="map_tech.html"><img src="../_img/tech.png"></a>
+            <h4>Tech</h4></div>
+          <div class="col-md-3">
+            <a href="map_family.html"><img src="../_img/family.png"></a>
+            <h4>Family</h4></div>
+          <div class="col-md-3">
+            <a href="map_hw.html"><img src="../_img/H&W.png"></a>
+            <h4>Health & Wellness</h4></div>
+      <div class="row">
+            <div class="col-md-3">
+                  <a href="map_sports.html"><img src="../_img/S&F.png"></a>
+                  <h4>Sports & Fitness</h4></div>
+                <div class="col-md-3">
+                  <a href="maps_learning.html"><img src="../_img/Learning.png"></a>
+                  <h4>Learning</h4></div>
+                <div class="col-md-3">
+                  <a href="map_photo.html"><img src="../_img/Photography.png"></a>
+                  <h4>Photography</h4></div>
+                <div class="col-md-3">
+                  <a href="map_food.html"><img src="../_img/Food&Drink.png"></a>
+                  <h4>Food & Drink</h4></div>
+      </div>
+      <div class="row">
+            <div class="col-md-3">
+                    <a href="map_writing.html"><img src="../_img/Writing.png"></a>
+                    <h4>Writing</h4></div>
+                <div class="col-md-3">
+                  <a href="map_language.html"><img src="../_img/L&C.png"></a>
+                  <h4>Language & Culture</h4></div>
+                <div class="col-md-3">
+                  <a href="map_music.html"><img src="../_img/Music.png"></a>
+                  <h4>Music</h4></div>
+                <div class="col-md-3">
+                  <a href="map_films.html"><img src="../_img/Films.png"></a>
+                  <h4>Films</h4></div>
+      </div>
+      <div class="row">
+                <div class="col-md-3">
+                    <a href="map_art.html"><img src="../_img/Arts.png"></a>
+                    <h4>Arts</h4></div>
+                <div class="col-md-3">
+                  <a href="maps_sf.html"><img src="../_img/S&G.png"></a>
+                  <h4>Sci-Fi & Games</h4></div>
+                <div class="col-md-3">
+                  <a href="maps_pets.html"><img src="../_img/Pets.png"></a>
+                  <h4>Pets</h4></div>
+                <div class="col-md-3">
+                  <a href="map_career.html"><img src="../_img/Career&Business.png"></a>
+                  <h4>Career & Business</h4></div>
+      </div>
+     </div>
+    </div>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm0suE59polcJ33ZwCVtoktq_mtTuCjKY&callback=initMap">
+  </script>
+  <!-- Linking to JavaScript file. -->
+  <script type="text/javascript" src="script.js"></script>
+
+
+  </body>
+  </html>

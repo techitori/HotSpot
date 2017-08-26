@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>HotSpot</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../category_style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../index.html"><img src="../_img/HotSpot_Logo_FNL.png" href="index.html" width="98" height="40.5"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html">ABOUT</a></li>
+        <li><a href="../index.html">SERVICES</a></li>
+        <li><a href="../index.html">REVIEWS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>
+
+
+  <div class="explore">
+      <h1>EXPLORE THE POSSIBILITIES</h1>
+      <div class"row">
+        <!-- Add Google Maps -->
+        <div id="map" style="height:400px;width:100%;"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+
+              zoom: 10,
+              center: new google.maps.LatLng(29.7628181,-95.3633884),
+              mapTypeId: 'roadmap'
+            });
+
+            var iconBase = '../_img/';
+            var icons = {
+
+              arts: {
+                icon: iconBase + 'Pindrop_Arts.png'
+              },
+              camping: {
+                icon: iconBase + 'Pindrop_Camping.png'
+              },
+              career: {
+                icon: iconBase + 'Pindrop_Career.png'
+              },
+              family: {
+                icon: iconBase + 'Pindrop_Family.png'
+              },
+              films: {
+                icon: iconBase + 'Pindrop_Films.png'
+              },
+              food: {
+                icon: iconBase + 'Pindrop_Food.png'
+              },
+              hw: {
+                icon: iconBase + 'Pindrop_H&W.png'
+              },
+              language: {
+                icon: iconBase + 'Pindrop_Language.png'
+              },
+              learning: {
+                icon: iconBase + 'Pindrop_Learning.png'
+              },
+              music: {
+                icon: iconBase + 'Pindrop_Music.png'
+              },
+              pets: {
+                icon: iconBase + 'Pindrop_Pets.png'
+              },
+              photography: {
+                icon: iconBase + 'Pindrop_Photography.png'
+              },
+              scifi: {
+                icon: iconBase + 'Pindrop_SciFiGames.png'
+              },
+              tech: {
+                icon: iconBase + 'Pindrop_Tech.png'
+              },
+              writing: {
+                icon: iconBase + 'Pindrop_Writing.png'
+              },
+              sf: {
+                icon: iconBase + 'Pindrop_S&F.png'
+              }
+            };
+
+            var features = [
+              {
+                position: new google.maps.LatLng(29.6628181,-95.3533884),
+                type: 'arts'
+              }, {
+                position: new google.maps.LatLng(29.7028181,-95.4633884),
+                type: 'arts'
+              }, {
+                position: new google.maps.LatLng(29.6728181,-95.3693884),
+                type: 'camping'
+              }, {
+                position: new google.maps.LatLng(29.628181,-95.3933884),
+                type: 'camping'
+              }, {
+                position: new google.maps.LatLng(29.7928181,-95.3533884),
+                type: 'career'
+              }, {
+                position: new google.maps.LatLng(29.9628181,-95.3033884),
+                type: 'career'
+              }, {
+                position: new google.maps.LatLng(29.8128181,-95.3633884),
+                type: 'family'
+              }, {
+                position: new google.maps.LatLng(29.7828181,-95.4633884),
+                type: 'family'
+              }, {
+                position: new google.maps.LatLng(29.9628181,-95.3033884),
+                type: 'films'
+              }, {
+                position: new google.maps.LatLng(29.6628181,-95.5633884),
+                type: 'films'
+              }, {
+                position: new google.maps.LatLng(29.6628181,-95.36330),
+                type: 'food'
+              }, {
+                position: new google.maps.LatLng(29.8620,-95.433884),
+                type: 'food',
+              }, {
+                position: new google.maps.LatLng(29.9628181,-95.533884),
+                type: 'hw'
+              }, {
+                position: new google.maps.LatLng(29.762,-95.3633884),
+                type: 'hw'
+              }, {
+                position: new google.maps.LatLng(29.7628181,-95.5),
+                type: 'language'
+              }, {
+                position: new google.maps.LatLng(29.7628181,-95.363),
+                type: 'language'
+              }, {
+                position: new google.maps.LatLng(29.7,-95.3633884),
+                type: 'learning'
+              }, {
+                position: new google.maps.LatLng(29.768181,-95.633884),
+                type: 'learning'
+              }, {
+                position: new google.maps.LatLng(29.7181,-95.360),
+                type: 'music'
+              }, {
+                position: new google.maps.LatLng(29.628181,-95.633884),
+                type: 'music'
+              }, {
+                position: new google.maps.LatLng(29.7628181,-95.3633884),
+                type: 'pets'
+              }, {
+                position: new google.maps.LatLng(29.628181,-95.3133884),
+                type: 'pets'
+              }, {
+                position: new google.maps.LatLng(29.7028181,-95.3033884),
+                type: 'photography'
+              }, {
+                position: new google.maps.LatLng(29.6628181,-95.2633884),
+                type: 'photography'
+              }, {
+                position: new google.maps.LatLng(29.5628181,-95.3033884),
+                type: 'scifi'
+              }, {
+                position: new google.maps.LatLng(29.8628181,-95.30633884),
+                type: 'scifi'
+              }, {
+                position: new google.maps.LatLng(29.7928181,-95.3533884),
+                type: 'tech'
+              }, {
+                position: new google.maps.LatLng(29.8628181,-95.233884),
+                type: 'tech'
+              }, {
+                position: new google.maps.LatLng(29.7083,-95.1719),
+                type: 'writing'
+              }, {
+                position: new google.maps.LatLng(29.777181,-95.3733884),
+                type: 'writing'
+              }, {
+                position: new google.maps.LatLng(29.7783,-95.1719),
+                type: 'sf'
+              }, {
+                position: new google.maps.LatLng(29.7028181,-95.3933884),
+                type: 'sf'
+              }
+            ];
+
+            // Create markers.
+            features.forEach(function(feature) {
+              var marker = new google.maps.Marker({
+                position: feature.position,
+                title: feature.title,
+                animation: feature.animation,
+                icon: icons[feature.type].icon,
+                map: map
+              });
+            });
+          }
+        </script>
+
+      </div>
+      <br>
+
+  <div class="row">
+      <div class="col-md-3">
+          <a href="map_outdoor.html"><img src="../_img/camping.png"></a>
+          <h4>Outdoor & Adventure</h4></div>
+      <div class="col-md-3">
+        <a href="map_tech.html"><img src="../_img/tech.png"></a>
+        <h4>Tech</h4></div>
+      <div class="col-md-3">
+        <a href="map_family.html"><img src="../_img/family.png"></a>
+        <h4>Family</h4></div>
+      <div class="col-md-3">
+        <a href="map_hw.html"><img src="../_img/H&W.png"></a>
+        <h4>Health & Wellness</h4></div>
+  <div class="row">
+        <div class="col-md-3">
+              <a href="map_sports.html"><img src="../_img/S&F.png"></a>
+              <h4>Sports & Fitness</h4></div>
+            <div class="col-md-3">
+              <a href="maps_learning.html"><img src="../_img/Learning.png"></a>
+              <h4>Learning</h4></div>
+            <div class="col-md-3">
+              <a href="map_photo.html"><img src="../_img/Photography.png"></a>
+              <h4>Photography</h4></div>
+            <div class="col-md-3">
+              <a href="map_food.html"><img src="../_img/Food&Drink.png"></a>
+              <h4>Food & Drink</h4></div>
+  </div>
+  <div class="row">
+        <div class="col-md-3">
+                <a href="map_writing.html"><img src="../_img/Writing.png"></a>
+                <h4>Writing</h4></div>
+            <div class="col-md-3">
+              <a href="map_language.html"><img src="../_img/L&C.png"></a>
+              <h4>Language & Culture</h4></div>
+            <div class="col-md-3">
+              <a href="map_music.html"><img src="../_img/Music.png"></a>
+              <h4>Music</h4></div>
+            <div class="col-md-3">
+              <a href="map_films.html"><img src="../_img/Films.png"></a>
+              <h4>Films</h4></div>
+  </div>
+  <div class="row">
+            <div class="col-md-3">
+                <a href="map_art.html"><img src="../_img/Arts.png"></a>
+                <h4>Arts</h4></div>
+            <div class="col-md-3">
+              <a href="maps_sf.html"><img src="../_img/S&G.png"></a>
+              <h4>Sci-Fi & Games</h4></div>
+            <div class="col-md-3">
+              <a href="maps_pets.html"><img src="../_img/Pets.png"></a>
+              <h4>Pets</h4></div>
+            <div class="col-md-3">
+              <a href="map_career.html"><img src="../_img/Career&Business.png"></a>
+              <h4>Career & Business</h4></div>
+  </div>
+ </div>
+</div>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm0suE59polcJ33ZwCVtoktq_mtTuCjKY&callback=initMap">
+</script>
+<!-- Linking to JavaScript file. -->
+<script type="text/javascript" src="../script.js"></script>
+
+
+</body>
+</html>
